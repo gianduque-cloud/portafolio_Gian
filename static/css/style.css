@@ -1,0 +1,249 @@
+/* Reseteo básico y variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+/* ===== BARRA LATERAL (IZQUIERDA) ===== */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: #1e293b;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.profile-container {
+  margin-bottom: 25px;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Hace la imagen circular */
+  object-fit: cover;
+  border: 3px solid #38bdf8;
+  background-color: #334155; /* Fondo en caso de que no haya imagen cargada */
+}
+
+.nav-menu {
+  width: 100%;
+}
+
+.nav-menu ul {
+  list-style: none;
+  width: 100%;
+}
+
+.nav-menu li {
+  width: 100%;
+}
+
+.nav-link {
+  display: block;
+  padding: 15px 25px;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #334155;
+  color: #38bdf8;
+  border-left: 4px solid #38bdf8;
+}
+
+/* ===== CONTENIDO PRINCIPAL (DERECHA) ===== */
+.main-content {
+  margin-left: 260px; /* Igual al ancho de la barra lateral */
+  padding: 40px;
+  width: calc(100% - 260px);
+}
+
+.section {
+  min-height: 80vh; /* Permite que cada sección ocupe casi toda la pantalla al bajar */
+  padding: 40px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.skills-list {
+  list-style: square;
+  padding-left: 20px;
+}
+
+.skills-list li {
+  margin-bottom: 10px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+/* Formulario */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #38bdf8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0284c7;
+}
+
+/* ===== ESTILOS PARA LA SECCIÓN DE HABILIDADES (IMAGE MATCH) ===== */
+
+/* Fondo oscuro si deseas que toda la sección se parezca a la imagen */
+#habilidades {
+  background-color: #12101a;
+  color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+#habilidades h2 {
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+/* Grilla de 2 columnas */
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px 50px; /* Espaciado entre filas y columnas */
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.skill-percent {
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+/* Barra de fondo blanca */
+.progress-bar-bg {
+  width: 100%;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  position: relative;
+}
+
+/* Barra con color */
+.progress-bar {
+  height: 100%;
+  border-radius: 4px 0 0 4px;
+  position: relative;
+}
+
+/* Círculo al final de la barra (Dot) */
+.dot {
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: inherit; /* Hereda el color de la barra */
+}
+
+/* ===== COLORES ESPECÍFICOS ===== */
+
+/* Amarillos */
+.yellow-bar { background-color: #facc15; }
+.yellow-text { color: #facc15; }
+
+/* Verdes */
+.green-bar { background-color: #2dd4bf; }
+.green-text { color: #2dd4bf; }
+
+/* Azul Claro / RocketChat */
+.skyblue-bar { background-color: #38bdf8; }
+.skyblue-text { color: #38bdf8; }
+
+/* Púrpuras / Office */
+.purple-bar { background-color: #c084fc; }
+.purple-text { color: #c084fc; }
+
+/* Azules Oscuros / Miro */
+.blue-bar { background-color: #3b82f6; }
+.blue-text { color: #3b82f6; }
+
+/* Rojos / Flojo */
+.red-bar { background-color: #f87171; }
+.red-text { color: #f87171; }
