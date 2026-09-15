@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Portafolio</title>
   <link rel="stylesheet" href="static/css/style.css">
 </head>
+
 <body>
 
   <!-- Barra lateral a la izquierda -->
   <aside class="sidebar">
     <div class="profile-container">
-      <!-- Reemplaza "tu-foto.jpg" por la ruta de tu imagen -->
       <img src="img/Gemini_Generated_Image_z4utbqz4utbqz4ut.jpg" alt="Foto de Perfil" class="profile-img">
     </div>
-    
+
     <nav class="nav-menu">
       <ul>
         <li><a href="#hogar" class="nav-link active">Hogar</a></li>
@@ -27,147 +28,253 @@
     </nav>
   </aside>
 
+  <!-- Video de Fondo -->
+  <video autoplay loop muted playsinline id="bg-video">
+    <source src="img/wallpaper_azul_fluido_marcado_loop_30s.mp4" type="video/mp4">
+  </video>
+
   <!-- Contenido principal a la derecha -->
   <main class="main-content">
-    
-    <section id="hogar" class="section">
-      <h1>Hola, soy <span style="color: blue;">[</span>Gian Duque<span style="color: blue;">]</span></h1>
-      <p>Bienvenido a mi portafolio profesional.</p>
-    </section>
+    <div class="Fondo-div">
 
-    <section id="acerca-de-mi" class="section">
-      <h2>Acerca de mí</h2>
-      <p>Aquí puedes escribir una breve biografía sobre ti, tus pasiones y tus metas profesionales.</p>
-    </section>
+      <!-- HOGAR -->
+      <section id="hogar" class="section">
+        <h1>Hola, soy <span class="highlight">[</span>Gian Duque<span class="highlight">]</span></h1>
+        <p class="subtitle">Bienvenido a mi portafolio profesional.</p>
+      </section>
 
-    <section id="habilidades" class="section">
-      <h2>Habilidades</h2>
-      
-      <div class="skills-container">
-        <!-- Columna Izquierda -->
-        <div class="skill-item">
-          <div class="skill-info">
-            <span class="skill-name">EXISTE</span>
-            <span class="skill-percent yellow-text">70%</span>
-          </div>
-          <div class="progress-bar-bg">
-            <div class="progress-bar yellow-bar" style="width: 70%;">
-              <span class="dot"></span>
+      <!-- ACERCA DE MÍ -->
+      <section id="acerca-de-mi" class="section">
+        <h2>Acerca de mí</h2>
+        <p>
+          Mi nombre es <strong>Carlos Duque Huenuleo</strong>, tengo <strong>18 años</strong> y vivo en <strong>Santiago
+            de Chile</strong>. Actualmente estudio <strong>Programación en el Liceo Vate Vicente Huidobro</strong>, una etapa que considero importante
+          para mi futuro, ya que me ha permitido acercarme a un área que cada vez despierta más mi interés.
+        </p>
+        <br>
+        <p>
+          Me considero una persona <strong>curiosa, perseverante y paciente</strong>. Siempre he tenido ganas de aprender
+          cosas nuevas y descubrir cómo funcionan las cosas, especialmente cuando se presentan desafíos que requieren buscar
+          soluciones. Para mí, equivocarme también forma parte del aprendizaje, ya que cada error representa una
+          oportunidad para mejorar y adquirir nuevos conocimientos.
+        </p>
+        <br>
+        <p>
+          Durante mis estudios en programación he comenzado a descubrir todo lo que se puede crear mediante la
+          tecnología. Esto me ha motivado a seguir aprendiendo y a pensar en las posibilidades que podría tener en el
+          futuro dentro de este campo.
+        </p>
+        <br>
+        <p>
+          Uno de mis principales objetivos es <strong>graduarme en el área de Programación</strong> y seguir
+          desarrollando mis conocimientos y habilidades. Quiero aprovechar cada experiencia que se presente en mi camino para crecer tanto
+          profesional como personalmente y, en el futuro, poder crear proyectos que sean útiles para otras personas.
+        </p>
+        <br>
+        <p>
+          Sé que todavía me queda mucho por aprender, pero tengo claro que quiero seguir advancing, enfrentar nuevos
+          desafíos y convertir mi curiosidad y mis ganas de aprender en herramientas que me permitan construir mi propio
+          camino.
+        </p>
+      </section>
+
+      <!-- HABILIDADES -->
+      <section id="habilidades" class="section">
+
+        <!-- Habilidades Técnicas -->
+        <div class="skills-block">
+          <h2 class="title-tech">Habilidades <span class="cyan-text">Técnicas</span></h2>
+          <p class="section-subtitle">Tecnologías y herramientas que manejo o estoy aprendiendo.</p>
+
+          <div class="skills-container">
+            <!-- HTML -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">HTML</span>
+                <span class="skill-percent purple-text">70%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar purple-bar" style="width: 70%;">
+                  <span class="dot"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- CSS -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">CSS</span>
+                <span class="skill-percent green-text">50%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar green-bar" style="width: 50%;">
+                  <span class="dot"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-percent blue-text">10%</span>
+              </div>
+              <div class="progress-bar-bg">
+                <div class="progress-bar blue-bar" style="width: 10%;">
+                  <span class="dot"></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Columna Derecha -->
-        <div class="skill-item">
-          <div class="skill-info">
-            <span class="skill-name">Microsoft Office</span>
-            <span class="skill-percent purple-text">70%</span>
+        <!-- Habilidades Blandas -->
+        <div class="skills-block">
+          <h2 class="title-soft">Habilidades <span class="green-text">Blandas</span></h2>
+          <p class="section-subtitle">Valores y cualidades que me ayudan a crecer y trabajar en equipo.</p>
+
+          <div class="soft-skills-container">
+            <div class="soft-card">
+              <div class="soft-icon circle-green">💡</div>
+              <p class="soft-title">Curiosidad</p>
+              <span class="soft-percent green-text">90%</span>
+              <div class="progress-bar-bg">
+                <div class="progress-bar green-bar" style="width: 90%;"></div>
+              </div>
+            </div>
+
+            <div class="soft-card">
+              <div class="soft-icon circle-purple">🎯</div>
+              <p class="soft-title">Perseverancia</p>
+              <span class="soft-percent purple-text">80%</span>
+              <div class="progress-bar-bg">
+                <div class="progress-bar purple-bar" style="width: 80%;"></div>
+              </div>
+            </div>
+
+            <div class="soft-card">
+              <div class="soft-icon circle-blue">⌛</div>
+              <p class="soft-title">Paciencia</p>
+              <span class="soft-percent blue-text">70%</span>
+              <div class="progress-bar-bg">
+                <div class="progress-bar blue-bar" style="width: 70%;"></div>
+              </div>
+            </div>
+
+            <div class="soft-card">
+              <div class="soft-icon circle-green">📖</div>
+              <p class="soft-title">Ganas de aprender</p>
+              <span class="soft-percent green-text">85%</span>
+              <div class="progress-bar-bg">
+                <div class="progress-bar green-bar" style="width: 85%;"></div>
+              </div>
+            </div>
+
+            <div class="soft-card">
+              <div class="soft-icon circle-purple">👥</div>
+              <p class="soft-title">Trabajo en equipo</p>
+              <span class="soft-percent purple-text">75%</span>
+              <div class="progress-bar-bg">
+                <div class="progress-bar purple-bar" style="width: 75%;"></div>
+              </div>
+            </div>
+
+            <div class="soft-card">
+              <div class="soft-icon circle-blue">⚙️</div>
+              <p class="soft-title">Resolución de problemas</p>
+              <span class="soft-percent blue-text">70%</span>
+              <div class="progress-bar-bg">
+                <div class="progress-bar blue-bar" style="width: 70%;"></div>
+              </div>
+            </div>
           </div>
-          <div class="progress-bar-bg">
-            <div class="progress-bar purple-bar" style="width: 70%;">
-              <span class="dot"></span>
+
+          <p class="disclaimer">ⓘ Los porcentajes representan una estimación personal de mi nivel actual.</p>
+        </div>
+
+      </section>
+
+      <!-- EDUCACIÓN -->
+      <section id="educacion" class="section">
+        <h2>Educación</h2>
+        <div class="card">
+          <h3>Técnico en Programación - En curso</h3>
+          <p><strong>Institución:</strong> Liceo Vate Vicente Huidobro</p>
+          <p>San Ramón, Santiago de Chile</p>
+          <br>
+          <p>Formación enfocada en el desarrollo de conocimientos
+            y habilidades en el área de programación y tecnología, incluyendo
+            el aprendizaje de herramientas, lenguajes y metodologías relacionadas
+            con el desarrollo de software.
+          </p>
+          <p><strong>Objetivo:</strong> Completar mi formación y graduarme en el
+            área de Programación, continuando posteriormente con el desarrollo de mis
+            habilidades y conocimientos tecnológicos.
+          </p>
+        </div>
+      </section>
+
+      <!-- EXPERIENCIA -->
+      <section id="experiencia" class="section">
+        <h2>Experiencia</h2>
+        <div class="card">
+          <h3>Curso de formación - Skillnest</h3>
+          <p>Formación complementaria en tecnología y programación.
+            Participación en cursos orientados al desarrollo
+            de conocimientos y habilidades enfocados en el área tecnológica.
+          </p>
+          <div class="box1">
+            <div class="box1-1">
+              <img src="" alt="img-experiencia">
+              <h3>Mini sitio web</h3>
+            </div>
+            <div class="box1-1">
+              <img src="" alt="img-experiencia">
+              <h3>Tarjeta de Usuario</h3>
+            </div>
+            <div class="box1-1">
+              <img src="" alt="img-experiencia">
+              <h3>Página de perfil</h3>
+            </div>
+            <div class="box1-1">
+              <img src="" alt="img-experiencia">
+              <h3>Diseño Con imágenes</h3>
+            </div>
+          </div>
+
+          <br>
+          <h3>Evento temporal - Feria TP</h3>
+          <p>Participación en labores de apoyo durante
+            una Feria TP, desarrollando habilidades como responsabilidad,
+            organización, trabajo en equipo y atención a las tareas asignadas.</p>
+          <div class="box1">
+            <div class="box1-1">
+              <img src="" alt="img-experiencia">
+              <h3>Prospere</h3>
+            </div>
+            <div class="box1-1">
+              <img src="" alt="img-experiencia">
+              <h3>Prospere</h3>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- Columna Izquierda -->
-        <div class="skill-item">
-          <div class="skill-info">
-            <span class="skill-name">Microsoft Teams</span>
-            <span class="skill-percent green-text">80%</span>
-          </div>
-          <div class="progress-bar-bg">
-            <div class="progress-bar green-bar" style="width: 80%;">
-              <span class="dot"></span>
-            </div>
-          </div>
-        </div>
+      <!-- CONTACTO -->
+      <section id="contacto" class="section-end">
+        <h2>Contacto</h2>
+        <form class="contact-form">
+          <input type="text" placeholder="Tu Nombre" required>
+          <input type="email" placeholder="Tu Correo Electrónico" required>
+          <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
 
-        <!-- Columna Derecha -->
-        <div class="skill-item">
-          <div class="skill-info">
-            <span class="skill-name">Tablero Miro</span>
-            <span class="skill-percent blue-text">70%</span>
-          </div>
-          <div class="progress-bar-bg">
-            <div class="progress-bar blue-bar" style="width: 70%;">
-              <span class="dot"></span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Columna Izquierda -->
-        <div class="skill-item">
-          <div class="skill-info">
-            <span class="skill-name">RocketChat</span>
-            <span class="skill-percent skyblue-text">70%</span>
-          </div>
-          <div class="progress-bar-bg">
-            <div class="progress-bar skyblue-bar" style="width: 70%;">
-              <span class="dot"></span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Columna Derecha -->
-        <div class="skill-item">
-          <div class="skill-info">
-            <span class="skill-name">Flojo</span>
-            <span class="skill-percent red-text">80%</span>
-          </div>
-          <div class="progress-bar-bg">
-            <div class="progress-bar red-bar" style="width: 80%;">
-              <span class="dot"></span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Columna Izquierda -->
-        <div class="skill-item">
-          <div class="skill-info">
-            <span class="skill-name">Trello</span>
-            <span class="skill-percent yellow-text">70%</span>
-          </div>
-          <div class="progress-bar-bg">
-            <div class="progress-bar yellow-bar" style="width: 70%;">
-              <span class="dot"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="educacion" class="section">
-      <h2>Educación</h2>
-      <div class="card">
-        <h3>Título Universitario / Carrera</h3>
-        <p><strong>Institución:</strong> Nombre de la Universidad o Instituto</p>
-        <p><strong>Año:</strong> 2020 - 2024</p>
-      </div>
-    </section>
-
-    <section id="experiencia" class="section">
-      <h2>Experiencia</h2>
-      <div class="card">
-        <h3>Puesto de Trabajo</h3>
-        <p><strong>Empresa:</strong> Nombre de la Empresa</p>
-        <p><strong>Periodo:</strong> 2022 - Presente</p>
-        <p>Descripción breve de tus responsabilidades y logros.</p>
-      </div>
-    </section>
-
-    <section id="contacto" class="section">
-      <h2>Contacto</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Tu Nombre" required>
-        <input type="email" placeholder="Tu Correo Electrónico" required>
-        <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-
+    </div>
   </main>
 
   <script src="static/js/script.js"></script>
 </body>
+
 </html>

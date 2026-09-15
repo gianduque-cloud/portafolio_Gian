@@ -1,4 +1,4 @@
-/* Reseteo básico y variables */
+/* ===== RESETEO Y FUENTES ===== */
 * {
   margin: 0;
   padding: 0;
@@ -8,15 +8,16 @@
 
 body {
   display: flex;
-  background-color: #f4f6f9;
-  color: #333;
+  background-color: #0f172a;
+  color: #f1f5f9;
 }
 
-/* ===== BARRA LATERAL (IZQUIERDA) ===== */
+/* ===== BARRA LATERAL ===== */
 .sidebar {
   width: 260px;
   height: 100vh;
-  background-color: #1e293b;
+  background-color: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
   color: #fff;
   position: fixed;
   top: 0;
@@ -25,6 +26,8 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
+  z-index: 10;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .profile-container {
@@ -32,12 +35,12 @@ body {
 }
 
 .profile-img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%; /* Hace la imagen circular */
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
   object-fit: cover;
   border: 3px solid #38bdf8;
-  background-color: #334155; /* Fondo en caso de que no haya imagen cargada */
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
 }
 
 .nav-menu {
@@ -46,10 +49,6 @@ body {
 
 .nav-menu ul {
   list-style: none;
-  width: 100%;
-}
-
-.nav-menu li {
   width: 100%;
 }
 
@@ -64,54 +63,257 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-  background-color: #334155;
+  background-color: rgba(56, 189, 248, 0.1);
   color: #38bdf8;
   border-left: 4px solid #38bdf8;
 }
 
-/* ===== CONTENIDO PRINCIPAL (DERECHA) ===== */
+/* ===== VIDEO DE FONDO ===== */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 260px;
+  width: calc(100vw - 260px);
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
 .main-content {
-  margin-left: 260px; /* Igual al ancho de la barra lateral */
+  margin-left: 260px;
   padding: 40px;
   width: calc(100% - 260px);
+  position: relative;
+}
+
+.Fondo-div {
+  background-color: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .section {
-  min-height: 80vh; /* Permite que cada sección ocupe casi toda la pantalla al bajar */
-  padding: 40px 0;
-  border-bottom: 1px solid #e2e8f0;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.section:last-child {
+  border-bottom: none;
+}
+
+#hogar {
+  text-align: center;
+}
+
+/* ===== TIPOGRAFÍA Y COLORES BÁSICOS ===== */
 h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #0f172a;
+  color: #ffffff;
 }
 
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #0f172a;
+  color: #38bdf8;
 }
 
-.skills-list {
-  list-style: square;
-  padding-left: 20px;
+.subtitle {
+  color: #cbd5e1;
+  font-size: 1.1rem;
 }
 
-.skills-list li {
-  margin-bottom: 10px;
+.highlight {
+  color: #38bdf8;
+  font-weight: bold;
 }
 
+.cyan-text { color: #38bdf8; }
+.green-text { color: #2dd4bf; }
+.purple-text { color: #c084fc; }
+.blue-text { color: #3b82f6; }
+
+/* ===== TARJETAS GENERALES ===== */
 .card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   margin-bottom: 15px;
 }
 
-/* Formulario */
+.card h3 {
+  color: #f8fafc;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.card strong {
+  color: #e2e8f0;
+}
+
+/* Subtarjetas de Proyectos en Experiencia */
+.box1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 15px 0 25px 0;
+}
+
+.box1-1 {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  flex: 1 1 180px;
+  text-align: center;
+}
+
+.box1-1 img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+/* ===== BLOQUES DE HABILIDADES ===== */
+.skills-block {
+  background-color: rgba(10, 18, 38, 0.7);
+  border: 1px solid #38bdf8;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.section-subtitle {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.disclaimer {
+  color: #64748b;
+  font-size: 0.8rem;
+  margin-top: 15px;
+}
+
+/* Habilidades Técnicas */
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 40px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.skill-name {
+  font-weight: 500;
+  color: #f1f5f9;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 4px;
+  position: relative;
+}
+
+.dot {
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.purple-bar { background-color: #c084fc; color: #c084fc; }
+.green-bar { background-color: #2dd4bf; color: #2dd4bf; }
+.blue-bar { background-color: #38bdf8; color: #38bdf8; }
+
+/* Habilidades Blandas */
+.soft-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.soft-card {
+  background-color: rgba(15, 23, 42, 0.8);
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 15px 10px;
+  width: 150px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.soft-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  line-height: 40px;
+  font-size: 1.2rem;
+}
+
+.circle-green {
+  background-color: rgba(45, 212, 191, 0.2);
+  border: 1px solid #2dd4bf;
+}
+
+.circle-purple {
+  background-color: rgba(192, 132, 252, 0.2);
+  border: 1px solid #c084fc;
+}
+
+.circle-blue {
+  background-color: rgba(56, 189, 248, 0.2);
+  border: 1px solid #38bdf8;
+}
+
+.soft-title {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: bold;
+  height: 35px;
+  margin-bottom: 5px;
+}
+
+.soft-percent {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* ===== FORMULARIO DE CONTACTO ===== */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -122,128 +324,37 @@ h2 {
 .contact-form input,
 .contact-form textarea {
   padding: 12px;
-  border: 1px solid #cbd5e1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
+  color: #fff;
   outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #38bdf8;
 }
 
 .contact-form button {
   padding: 12px;
   background-color: #38bdf8;
-  color: #fff;
+  color: #0f172a;
   border: none;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s;
 }
 
 .contact-form button:hover {
   background-color: #0284c7;
+  color: #fff;
 }
 
-/* ===== ESTILOS PARA LA SECCIÓN DE HABILIDADES (IMAGE MATCH) ===== */
-
-/* Fondo oscuro si deseas que toda la sección se parezca a la imagen */
-#habilidades {
-  background-color: #12101a;
-  color: #ffffff;
-  padding: 40px;
-  border-radius: 12px;
-}
-
-#habilidades h2 {
-  color: #ffffff;
-  margin-bottom: 30px;
-}
-
-/* Grilla de 2 columnas */
-.skills-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px 50px; /* Espaciado entre filas y columnas */
-}
-
-/* Adaptación para pantallas pequeñas */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .skills-container {
     grid-template-columns: 1fr;
   }
 }
-
-.skill-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.skill-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.skill-name {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #e2e8f0;
-}
-
-.skill-percent {
-  font-size: 0.95rem;
-  font-weight: bold;
-}
-
-/* Barra de fondo blanca */
-.progress-bar-bg {
-  width: 100%;
-  height: 6px;
-  background-color: #ffffff;
-  border-radius: 4px;
-  position: relative;
-}
-
-/* Barra con color */
-.progress-bar {
-  height: 100%;
-  border-radius: 4px 0 0 4px;
-  position: relative;
-}
-
-/* Círculo al final de la barra (Dot) */
-.dot {
-  position: absolute;
-  right: -6px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: inherit; /* Hereda el color de la barra */
-}
-
-/* ===== COLORES ESPECÍFICOS ===== */
-
-/* Amarillos */
-.yellow-bar { background-color: #facc15; }
-.yellow-text { color: #facc15; }
-
-/* Verdes */
-.green-bar { background-color: #2dd4bf; }
-.green-text { color: #2dd4bf; }
-
-/* Azul Claro / RocketChat */
-.skyblue-bar { background-color: #38bdf8; }
-.skyblue-text { color: #38bdf8; }
-
-/* Púrpuras / Office */
-.purple-bar { background-color: #c084fc; }
-.purple-text { color: #c084fc; }
-
-/* Azules Oscuros / Miro */
-.blue-bar { background-color: #3b82f6; }
-.blue-text { color: #3b82f6; }
-
-/* Rojos / Flojo */
-.red-bar { background-color: #f87171; }
-.red-text { color: #f87171; }
